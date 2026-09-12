@@ -126,19 +126,28 @@
                     <span class="section-subtitle">What I Do</span>
                     <h2>Skills & Expertise</h2>
                 </div>
+                
+                <!-- Filter Tabs -->
+                <div class="skills-filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Skills</button>
+                    <button class="filter-tab" data-filter="strategy"><i class="ri-compass-3-line"></i> Strategy & Growth</button>
+                    <button class="filter-tab" data-filter="content"><i class="ri-quill-pen-line"></i> Content & Creative</button>
+                    <button class="filter-tab" data-filter="analytics"><i class="ri-tools-line"></i> Analytics & Tools</button>
+                </div>
+
                 <div class="skills-grid">
-                    <div class="skill-tag hover-glow">Instagram Strategy</div>
-                    <div class="skill-tag hover-glow">LinkedIn Growth</div>
-                    <div class="skill-tag hover-glow">Facebook Strategy</div>
-                    <div class="skill-tag hover-glow">Content Planning</div>
-                    <div class="skill-tag hover-glow">Analytics</div>
-                    <div class="skill-tag hover-glow">Community Building</div>
-                    <div class="skill-tag hover-glow">Influencer Management</div>
-                    <div class="skill-tag hover-glow">Campaign Execution</div>
-                    <div class="skill-tag hover-glow">Canva</div>
-                    <div class="skill-tag hover-glow">Meta Business Suite</div>
-                    <div class="skill-tag hover-glow">ORM</div>
-                    <div class="skill-tag hover-glow">SEO Basics</div>
+                    <div class="skill-tag hover-glow" data-category="strategy"><i class="ri-instagram-line"></i> Instagram Strategy</div>
+                    <div class="skill-tag hover-glow" data-category="strategy"><i class="ri-linkedin-box-line"></i> LinkedIn Growth</div>
+                    <div class="skill-tag hover-glow" data-category="strategy"><i class="ri-facebook-box-line"></i> Facebook Strategy</div>
+                    <div class="skill-tag hover-glow" data-category="content"><i class="ri-calendar-event-line"></i> Content Planning</div>
+                    <div class="skill-tag hover-glow" data-category="analytics"><i class="ri-bar-chart-line"></i> Analytics</div>
+                    <div class="skill-tag hover-glow" data-category="content"><i class="ri-group-line"></i> Community Building</div>
+                    <div class="skill-tag hover-glow" data-category="content"><i class="ri-user-star-line"></i> Influencer Management</div>
+                    <div class="skill-tag hover-glow" data-category="strategy"><i class="ri-rocket-line"></i> Campaign Execution</div>
+                    <div class="skill-tag hover-glow" data-category="analytics"><i class="ri-palette-line"></i> Canva</div>
+                    <div class="skill-tag hover-glow" data-category="analytics"><i class="ri-meta-line"></i> Meta Business Suite</div>
+                    <div class="skill-tag hover-glow" data-category="analytics"><i class="ri-message-3-line"></i> ORM</div>
+                    <div class="skill-tag hover-glow" data-category="analytics"><i class="ri-search-eye-line"></i> SEO Basics</div>
                 </div>
             </div>
         </section>
@@ -148,17 +157,19 @@
                 <div class="section-header reveal-on-scroll">
                     <span class="section-subtitle">Portfolio</span>
                     <h2>Featured Work</h2>
+                    <p class="section-desc">Click any brand card to launch an in-depth interactive Case Study breakdown.</p>
                 </div>
                 
                 <div class="work-grid">
                     <!-- Scroll Mantra -->
-                    <div class="work-card glass-panel reveal-on-scroll">
+                    <div class="work-card glass-panel reveal-on-scroll clickable-card" data-brand="scroll-mantra">
                         <div class="card-header">
                             <div class="brand-logo" style="background: conic-gradient(#4caf50 25%, #ffeb3b 0 50%, #f44336 0 75%, #2196f3 0); border-radius: 50%;"></div>
                             <div class="brand-meta">
                                 <h3>Scroll Mantra</h3>
                                 <span>Jr. Social Media Strategist</span>
                             </div>
+                            <span class="card-action-btn"><i class="ri-arrow-right-up-line"></i></span>
                         </div>
                         <div class="card-body">
                             <p>End-to-end digital strategy for high-visibility brands. From campaign planning to execution and reporting, I specialize in boosting reach, improving audience retention, and building content that drives results across platforms.</p>
@@ -173,74 +184,88 @@
                                     <span class="metric-label">Content Interactions</span>
                                 </div>
                             </div>
+                            <div class="card-footer-cta">
+                                <span>View Deep-Dive Case Study <i class="ri-external-link-line"></i></span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Register Karo -->
-                    <div class="work-card glass-panel reveal-on-scroll delay-1">
+                    <div class="work-card glass-panel reveal-on-scroll delay-1 clickable-card" data-brand="register-karo">
                         <div class="card-header">
                             <div class="brand-logo bg-orange"><i class="ri-shield-check-fill" style="color: white; font-size: 1.5rem;"></i></div>
                             <div class="brand-meta">
                                 <h3>Register Karo</h3>
                                 <span>Content Planning & Execution</span>
                             </div>
+                            <span class="card-action-btn"><i class="ri-arrow-right-up-line"></i></span>
                         </div>
                         <div class="card-body">
                             <p>Led content planning and execution across LinkedIn and Instagram—boosting follower growth, engagement, and overall post reach through strategic, insight-driven social media management.</p>
                             
                             <div class="resource-links mt-4">
-                                <a href="#" class="resource-link"><i class="ri-file-list-3-line"></i> Content Ideas Sample</a>
-                                <a href="#" class="resource-link"><i class="ri-file-paper-2-line"></i> Campaign Script Sample</a>
+                                <span class="resource-link"><i class="ri-file-list-3-line"></i> Content Ideas Sample</span>
+                                <span class="resource-link"><i class="ri-file-paper-2-line"></i> Campaign Script Sample</span>
+                            </div>
+                            <div class="card-footer-cta">
+                                <span>View Deep-Dive Case Study <i class="ri-external-link-line"></i></span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Doyen Ed -->
-                    <div class="work-card glass-panel reveal-on-scroll">
+                    <div class="work-card glass-panel reveal-on-scroll clickable-card" data-brand="doyen-ed">
                         <div class="card-header">
                             <div class="brand-logo bg-amber"><i class="ri-shield-star-fill" style="color: white; font-size: 1.5rem;"></i></div>
                             <div class="brand-meta">
                                 <h3>Doyen Ed</h3>
                                 <span>High-Performing Instagram</span>
                             </div>
+                            <span class="card-action-btn"><i class="ri-arrow-right-up-line"></i></span>
                         </div>
                         <div class="card-body">
                             <p>Built a high-performing Instagram presence by developing data-backed content, securing collaborations, and leading ad-driven campaigns that boosted reach, impressions, and webinar attendance.</p>
                             
-                            <div class="image-gallery mt-4">
-                                <div class="gallery-placeholder">Campaign Example</div>
-                                <div class="gallery-placeholder">Content Example</div>
+                            <div class="resource-links mt-4">
+                                <span class="resource-link"><i class="ri-video-line"></i> Campaign & Reel Samples</span>
+                            </div>
+                            <div class="card-footer-cta">
+                                <span>View Deep-Dive Case Study <i class="ri-external-link-line"></i></span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Yellow Octo -->
-                    <div class="work-card glass-panel reveal-on-scroll delay-1">
+                    <div class="work-card glass-panel reveal-on-scroll delay-1 clickable-card" data-brand="yellow-octo">
                         <div class="card-header">
                             <div class="brand-logo bg-black"><i class="ri-tentacle-line" style="color: #ffc107; font-size: 1.5rem;"></i></div>
                             <div class="brand-meta">
                                 <h3>Yellow Octo LLP</h3>
                                 <span>LinkedIn & Instagram Presence</span>
                             </div>
+                            <span class="card-action-btn"><i class="ri-arrow-right-up-line"></i></span>
                         </div>
                         <div class="card-body">
                             <p>Strengthened the brand's LinkedIn and Instagram presence through consistent content creation and strategic engagement, driving significant growth in followers, reach, and overall visibility.</p>
                             
-                            <div class="image-gallery mt-4">
-                                <div class="gallery-placeholder">Reel Example</div>
-                                <div class="gallery-placeholder">Post Example</div>
+                            <div class="resource-links mt-4">
+                                <span class="resource-link"><i class="ri-image-line"></i> Content Strategy & Reel Previews</span>
+                            </div>
+                            <div class="card-footer-cta">
+                                <span>View Deep-Dive Case Study <i class="ri-external-link-line"></i></span>
                             </div>
                         </div>
                     </div>
 
                     <!-- FlyUp -->
-                    <div class="work-card glass-panel reveal-on-scroll full-width">
+                    <div class="work-card glass-panel reveal-on-scroll full-width clickable-card" data-brand="flyup">
                         <div class="card-header">
                             <div class="brand-logo bg-purple"><i class="ri-flight-takeoff-line" style="color: white; font-size: 1.5rem;"></i></div>
                             <div class="brand-meta">
                                 <h3>FlyUp</h3>
                                 <span>Content Strategy & Creation</span>
                             </div>
+                            <span class="card-action-btn"><i class="ri-arrow-right-up-line"></i></span>
                         </div>
                         <div class="card-body two-columns">
                             <div>
@@ -257,15 +282,63 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="image-gallery-grid">
-                                <div class="gallery-placeholder mini">Post 1</div>
-                                <div class="gallery-placeholder mini">Post 2</div>
-                                <div class="gallery-placeholder mini">Post 3</div>
-                                <div class="gallery-placeholder mini">Post 4</div>
+                            <div class="card-right-preview">
+                                <div class="resource-links mt-4">
+                                    <span class="resource-link"><i class="ri-slideshow-line"></i> 100+ Visual Assets & Content Calendars</span>
+                                </div>
+                                <div class="card-footer-cta">
+                                    <span>View Deep-Dive Case Study <i class="ri-external-link-line"></i></span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Growth Strategy Simulator -->
+        <section class="simulator section-padding" id="simulator">
+            <div class="container reveal-on-scroll">
+                <div class="section-header center">
+                    <span class="section-subtitle">Interactive Playbook</span>
+                    <h2>Brand Strategy Simulator</h2>
+                    <p class="section-desc">Select your platform, brand stage, and goal to dynamically generate Yatish's strategic content playbook.</p>
+                </div>
+
+                <div class="simulator-card glass-panel p-lg">
+                    <div class="simulator-controls">
+                        <div class="control-group">
+                            <label><i class="ri-global-line"></i> Platform</label>
+                            <div class="pill-selector" id="sim-platform">
+                                <button class="sim-pill active" data-val="instagram"><i class="ri-instagram-line"></i> Instagram</button>
+                                <button class="sim-pill" data-val="linkedin"><i class="ri-linkedin-box-line"></i> LinkedIn</button>
+                                <button class="sim-pill" data-val="facebook"><i class="ri-facebook-circle-line"></i> Facebook</button>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label><i class="ri-building-line"></i> Brand Stage</label>
+                            <div class="pill-selector" id="sim-stage">
+                                <button class="sim-pill active" data-val="startup">Early Startup</button>
+                                <button class="sim-pill" data-val="growth">Scaling Brand</button>
+                                <button class="sim-pill" data-val="enterprise">Established Brand</button>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label><i class="ri-target-line"></i> Primary Objective</label>
+                            <div class="pill-selector" id="sim-goal">
+                                <button class="sim-pill active" data-val="reach">Viral Reach & Awareness</button>
+                                <button class="sim-pill" data-val="engagement">Community & Retention</button>
+                                <button class="sim-pill" data-val="leads">Lead Gen & Conversions</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="simulator-output glass-panel-inner mt-4" id="simOutput">
+                        <!-- Dynamically populated by JS -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -293,6 +366,34 @@
             </div>
         </section>
     </main>
+
+    <!-- Case Study Fullscreen Modal -->
+    <div class="modal-backdrop" id="caseStudyModal" aria-hidden="true">
+        <div class="modal-container glass-panel">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal"><i class="ri-close-line"></i></button>
+            <div class="modal-header">
+                <div class="brand-logo" id="modalLogo"></div>
+                <div class="modal-title-group">
+                    <h2 id="modalBrandTitle">Scroll Mantra</h2>
+                    <p id="modalBrandRole">Jr. Social Media Strategist</p>
+                </div>
+            </div>
+
+            <div class="modal-nav-tabs">
+                <button class="modal-tab active" data-tab="overview"><i class="ri-information-line"></i> Overview</button>
+                <button class="modal-tab" data-tab="strategy"><i class="ri-compass-3-line"></i> Strategy</button>
+                <button class="modal-tab" data-tab="creatives"><i class="ri-image-2-line"></i> Creatives & Assets</button>
+                <button class="modal-tab" data-tab="metrics"><i class="ri-line-chart-line"></i> Metrics & Impact</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-tab-content active" id="tab-overview"></div>
+                <div class="modal-tab-content" id="tab-strategy"></div>
+                <div class="modal-tab-content" id="tab-creatives"></div>
+                <div class="modal-tab-content" id="tab-metrics"></div>
+            </div>
+        </div>
+    </div>
 
     <footer class="relative-z">
         <div class="container">
