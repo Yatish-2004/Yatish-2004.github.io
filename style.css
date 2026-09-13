@@ -898,8 +898,52 @@ img {
 
 /* Simulator Section */
 .simulator-card {
-    max-width: 950px;
+    max-width: 980px;
     margin: 0 auto;
+}
+
+.sim-header-badge {
+    background: rgba(168, 85, 247, 0.08);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 14px;
+    padding: 0.75rem 1.2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.ai-status {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #38bdf8;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #38bdf8;
+    animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 10px #38bdf8; }
+    50% { transform: scale(1.4); opacity: 0.6; box-shadow: 0 0 18px #38bdf8; }
+}
+
+.ai-subtitle-tag {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .simulator-controls {
@@ -930,9 +974,9 @@ img {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-color);
     color: var(--text-secondary);
-    padding: 0.7rem 1rem;
+    padding: 0.65rem 0.9rem;
     border-radius: 12px;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     cursor: pointer;
     transition: var(--transition);
     text-align: left;
@@ -947,11 +991,11 @@ img {
 }
 
 .sim-pill.active {
-    background: rgba(168, 85, 247, 0.15);
+    background: rgba(168, 85, 247, 0.18);
     border-color: var(--accent-primary);
     color: var(--text-primary);
     font-weight: 600;
-    box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
 }
 
 .sim-output-grid {
@@ -959,25 +1003,94 @@ img {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
     padding: 1.2rem;
+    transition: opacity 0.3s ease;
 }
 
 .sim-box {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.35);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.2rem;
+    border-radius: 14px;
+    padding: 1.3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.sim-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
 }
 
 .sim-box h4 {
-    color: var(--accent-secondary);
+    color: #f1f5f9;
     font-size: 0.95rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.sim-box p, .sim-box ul {
+.sim-box h4 i {
+    color: var(--accent-secondary);
+    font-size: 1.1rem;
+}
+
+.sim-box p {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.sim-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0 0 0;
+}
+
+.sim-box ul li {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.sim-box ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-size: 0.8rem;
+}
+
+.sim-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    gap: 1rem;
+}
+
+.sim-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(168, 85, 247, 0.2);
+    border-top: 3px solid var(--accent-primary);
+    border-radius: 50%;
+    animation: spinSim 0.8s linear infinite;
+}
+
+@keyframes spinSim {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
     color: var(--text-secondary);
     font-size: 0.9rem;
 }
