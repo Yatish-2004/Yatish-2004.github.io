@@ -279,21 +279,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>Scroll Mantra is a digital strategy agency managing high-visibility brand accounts across aviation, sportswear, live events, and renewable energy. As Jr. Social Media Strategist, I own end-to-end strategy and execution for <strong>Vietjet, T10 Sports, KD Amdavad Marathon, and Bharat Solar Shakti</strong> across Instagram, Facebook, LinkedIn, YouTube, WhatsApp, X, and Snapchat.</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-focus-3-line"></i> Scope & Multi-Industry Reach</h4>
-                        <p>Handling content strategies, campaign calendars, and multi-channel communication plans for four brands simultaneously across seven major social platforms.</p>
+                        <h4><i class="ri-focus-3-line"></i> 4 Key Brands Portfolio</h4>
+                        <p><strong>✈️ Vietjet Air:</strong> Global Aviation Campaign & Kiosk Activation<br>
+                        <strong>🏏 T10 Sports:</strong> IPL 2026 Merchandise Partner Campaigns<br>
+                        <strong>🏃 KD Amdavad Marathon:</strong> Organ Donation Social Awareness<br>
+                        <strong>☀️ Bharat Solar Shakti:</strong> B2B Clean Tech & Solar Awareness</p>
                     </div>
                 </div>
             `,
             strategy: `
                 <div class="modal-card mb-4">
-                    <h4><i class="ri-compass-3-line"></i> Core Strategy & Execution</h4>
+                    <h4><i class="ri-compass-3-line"></i> Core Strategy & Execution Across All 4 Brands</h4>
                     <ul>
-                        <li>Built platform-specific content strategies, campaign calendars, and communication plans for four brands across four different industries.</li>
-                        <li>Planned and executed paid campaigns, influencer marketing, and WhatsApp marketing initiatives, using KPI tracking to optimize ROI.</li>
-                        <li>Co-managed Vietjet's Diwali campaign — a 50% booking offer, a mall kiosk activation in Ahmedabad, and the "My Dream Boarding Pass" contest.</li>
-                        <li>Led social execution for T10 Sports as official merchandise partner for Gujarat Titans during IPL 2026, tying content to fan meetups and stadium activations.</li>
-                        <li>Conceptualized KD Amdavad Marathon's "Silent Runner" campaign — 8 runner silhouettes representing the 8 lives one organ donor can save.</li>
-                        <li>Diagnosed a 3-second audience drop-off on static brand intros and rebuilt the hook: immediate visual impact, high-contrast typography, pattern interrupts.</li>
+                        <li><strong>Multi-Industry Architecture:</strong> Built platform-specific content strategies, campaign calendars, and communication plans for four brands across four distinct industries (Aviation, Sportswear, Events, Energy).</li>
+                        <li><strong>Vietjet Air Diwali Activation:</strong> Co-managed Diwali booking campaign — 50% flight discount offers, a physical interactive mall kiosk activation in Ahmedabad, and the "My Dream Boarding Pass" viral contest.</li>
+                        <li><strong>T10 Sports (IPL 2026):</strong> Led social media execution for T10 Sports as the official merchandise partner for Gujarat Titans during IPL 2026, creating real-time content for fan meetups, stadium activations, and player gear releases.</li>
+                        <li><strong>KD Amdavad Marathon:</strong> Conceptualized the "Silent Runner" campaign featuring 8 runner silhouettes representing the 8 lives one organ donor can save, driving massive civic awareness and shares.</li>
+                        <li><strong>Bharat Solar Shakti:</strong> Crafted B2B solar adoption visual guides, clean energy infographics, and founder LinkedIn content.</li>
+                        <li><strong>Retention Audit:</strong> Diagnosed a 3-second drop-off on static brand intros and rebuilt the hook: immediate visual contrast, high-impact typography, and 3-second pattern interrupts.</li>
                     </ul>
                 </div>
             `,
@@ -302,14 +305,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="mock-post-card">
                         <div class="mock-post-header">
                             <div class="mock-post-avatar"></div>
-                            <span class="mock-post-user">Vietjet Air • Diwali Campaign</span>
+                            <span class="mock-post-user">Vietjet Air • Diwali Contest</span>
                         </div>
                         <div class="mock-post-body">
-                            ✈️ "My Dream Boarding Pass Contest & 50% Booking Offer Kiosk Activation"
+                            ✈️ "My Dream Boarding Pass Contest & Mall Kiosk Activation"
                         </div>
                         <div class="mock-post-stats">
                             <span><i class="ri-heart-line"></i> 12.5M+ Views</span>
                             <span><i class="ri-chat-3-line"></i> 500% Interaction Surge</span>
+                        </div>
+                    </div>
+                    <div class="mock-post-card">
+                        <div class="mock-post-header">
+                            <div class="mock-post-avatar"></div>
+                            <span class="mock-post-user">T10 Sports • IPL 2026</span>
+                        </div>
+                        <div class="mock-post-body">
+                            🏏 "Official Gujarat Titans Merchandise Release & Stadium Fan Meetups"
+                        </div>
+                        <div class="mock-post-stats">
+                            <span><i class="ri-user-follow-line"></i> Fan Activation</span>
                         </div>
                     </div>
                     <div class="mock-post-card">
@@ -321,7 +336,19 @@ document.addEventListener('DOMContentLoaded', () => {
                             🎽 "The Silent Runner — 8 Silhouettes, 8 Lives Saved by Organ Donation"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-share-forward-line"></i> Viral Campaign</span>
+                            <span><i class="ri-share-forward-line"></i> Civic Awareness Viral</span>
+                        </div>
+                    </div>
+                    <div class="mock-post-card">
+                        <div class="mock-post-header">
+                            <div class="mock-post-avatar"></div>
+                            <span class="mock-post-user">Bharat Solar Shakti</span>
+                        </div>
+                        <div class="mock-post-body">
+                            ☀️ "Clean Energy Revolution: B2B Solar Adoption Playbook"
+                        </div>
+                        <div class="mock-post-stats">
+                            <span><i class="ri-line-chart-line"></i> B2B Thought Leadership</span>
                         </div>
                     </div>
                 </div>
@@ -329,13 +356,13 @@ document.addEventListener('DOMContentLoaded', () => {
             metrics: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-trophy-line"></i> MoM Reach & View Growth</h4>
+                        <h4><i class="ri-trophy-line"></i> Verified MoM Growth</h4>
                         <p><strong>+45.3%</strong> Facebook reach growth (MoM)<br>
                         <strong>+40.3%</strong> Instagram reach growth (MoM)<br>
                         <strong>+809%</strong> surge in YouTube views (MoM)</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-sparkles-line"></i> 3,000% Campaign Surge</h4>
+                        <h4><i class="ri-sparkles-line"></i> 3,000% Campaign View Surge</h4>
                         <p>Scaled cumulative video view growth from <strong>400K → 12.5M+ views</strong> over a 28-day campaign push with <strong>+500%</strong> increase in content interactions.</p>
                     </div>
                 </div>
