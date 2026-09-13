@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorBlob = document.querySelector('.cursor-blob');
     const cursorFollower = document.querySelector('.cursor-blob-follower');
     
-    // Only enable custom cursor on non-touch devices
     if (window.matchMedia("(pointer: fine)").matches) {
         document.addEventListener('mousemove', (e) => {
             cursorFollower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
@@ -95,9 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
         animatedElements.forEach(el => el.classList.add('visible'));
     }, 100);
 
-    // Scroll Reveal Animation with Intersection Observer
+    // Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
-    
     const revealOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -50px 0px"
@@ -221,19 +219,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const mixMap = {
             instagram: {
-                reach: { format: '60% Reels, 30% Carousels, 10% Stories', frequency: '4-5 posts/week', hook: 'Pattern Interrupts & Storytelling Hooks', metric: 'Reel Impressions & Non-Follower Reach' },
-                engagement: { format: '50% Educational Carousels, 30% Interactive Stories, 20% Reels', frequency: '3-4 posts/week', hook: 'Relatable Problem-Agitation-Solution', metric: 'Saves, Shares & Comment Ratio' },
-                leads: { format: '40% Direct-Offer Reels, 40% Social Proof Carousels, 20% Broadcast Stories', frequency: '4 posts/week', hook: 'Case Study Transformation Teasers', metric: 'DM Keywords & Link Clicks' }
+                reach: { format: '60% Reels, 30% Carousels, 10% Stories', frequency: '4-5 posts/week', hook: 'Pattern Interrupts & High Visual Contrast', metric: 'Reel Impressions & Non-Follower Reach' },
+                engagement: { format: '50% Educational Carousels, 30% Interactive Stories, 20% Reels', frequency: '3-4 posts/week', hook: 'Relatable Problem-Agitation-Solution', metric: 'Saves, Shares & Comment Depth' },
+                leads: { format: '40% Direct-Offer Reels, 40% Lead Magnet Carousels, 20% Broadcast Stories', frequency: '4 posts/week', hook: 'Case Study Transformation Teasers', metric: 'DM Keywords & Webinar Sign-ups' }
             },
             linkedin: {
-                reach: { format: '50% Text + Image Breakdowns, 30% PDF Documents, 20% Video', frequency: '3 posts/week', hook: 'Bold Industry Unpopular Opinions', metric: 'Post Views & Profile Visits' },
-                engagement: { format: '60% PDF Document Playbooks, 30% Opinion Polls/Questions, 10% Long-form', frequency: '3 posts/week', hook: 'Framework & Cheat-sheet Downloads', metric: 'Comment Depth & Reposts' },
-                leads: { format: '50% Breakdown Case Studies, 30% Direct Offer Posts, 20% Founder Stories', frequency: '4 posts/week', hook: 'Behind-the-Scenes Client Results', metric: 'InMail Inquiries & Inbound Leads' }
+                reach: { format: '50% Text + Image Breakdowns, 30% PDF Documents, 20% Video', frequency: '3 posts/week', hook: 'Bold Industry Counter-Intuitive Insights', metric: 'Post Views & Profile Visits' },
+                engagement: { format: '60% PDF Document Playbooks, 30% Opinion Polls/Questions, 10% Long-form', frequency: '3 posts/week', hook: 'Framework & Compliance Cheat-sheets', metric: 'Comment Depth & Reposts' },
+                leads: { format: '50% Breakdown Case Studies, 30% Lead Magnet PDF Guides, 20% BTS Stories', frequency: '4 posts/week', hook: 'Behind-the-Scenes Client Growth', metric: 'Inbound Leads & Inquiry DM Rate' }
             },
             facebook: {
-                reach: { format: '50% Short Video Reels, 30% Image Ads/Posts, 20% Link Posts', frequency: '4 posts/week', hook: 'Curiosity Gaps & High Emotion', metric: 'Share Volume & Reach' },
-                engagement: { format: '40% Community Discussions, 40% Photo Albums, 20% Live Q&A', frequency: '3 posts/week', hook: 'Community Polls & Feedback Requests', metric: 'Group Growth & Discussion Volume' },
-                leads: { format: '60% Direct Offer Copy + Image, 40% Video Testimonials', frequency: '4 posts/week', hook: 'Limited-Time Incentive or Free Audit Offer', metric: 'Cost Per Lead & Click Through Rate' }
+                reach: { format: '50% Short Video Reels, 30% Image Ads/Posts, 20% Link Posts', frequency: '4 posts/week', hook: 'Curiosity Gaps & Emotional Relevance', metric: 'Share Volume & MoM Reach' },
+                engagement: { format: '40% Community Discussions, 40% Photo Albums, 20% Live Q&A', frequency: '3 posts/week', hook: 'Community Polls & Interactive Prompts', metric: 'Group Growth & Discussion Volume' },
+                leads: { format: '60% Direct Offer Copy + Image, 40% Testimonial Reels', frequency: '4 posts/week', hook: 'Webinar Funnel & Direct Registration', metric: 'Cost Per Registration & Click Through Rate' }
             }
         };
 
@@ -256,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="sim-box" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
                     <h4><i class="ri-flashlight-line"></i> Strategic Impact</h4>
-                    <p class="mb-4">Customized for <strong>${currentSim.stage.toUpperCase()}</strong> stage positioning.</p>
+                    <p class="mb-4">Tailored for <strong>${currentSim.stage.toUpperCase()}</strong> stage positioning.</p>
                     <a href="#contact" class="btn-primary small" style="margin-top: auto;">Execute This Strategy <i class="ri-arrow-right-line"></i></a>
                 </div>
             </div>
@@ -277,25 +275,26 @@ document.addEventListener('DOMContentLoaded', () => {
             overview: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-building-line"></i> Brand Overview</h4>
-                        <p>Scroll Mantra is a premier digital strategy agency managing high-profile brands. As Jr. Social Media Strategist, I directed end-to-end brand positioning, visual storytelling, and cross-platform campaign analytics.</p>
+                        <h4><i class="ri-building-line"></i> Executive Summary</h4>
+                        <p>Scroll Mantra is a digital strategy agency managing high-visibility brand accounts across aviation, sportswear, live events, and renewable energy. As Jr. Social Media Strategist, I own end-to-end strategy and execution for <strong>Vietjet, T10 Sports, KD Amdavad Marathon, and Bharat Solar Shakti</strong> across Instagram, Facebook, LinkedIn, YouTube, WhatsApp, X, and Snapchat.</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-focus-3-line"></i> Key Responsibilities</h4>
-                        <p>End-to-end campaign architecture, audience retention audits, viral content scripting, weekly performance analytics reporting, and client stakeholder management.</p>
+                        <h4><i class="ri-focus-3-line"></i> Scope & Multi-Industry Reach</h4>
+                        <p>Handling content strategies, campaign calendars, and multi-channel communication plans for four brands simultaneously across seven major social platforms.</p>
                     </div>
                 </div>
             `,
             strategy: `
-                <div class="modal-grid-2">
-                    <div class="modal-card">
-                        <h4><i class="ri-lightbulb-line"></i> Insight & Hypothesis</h4>
-                        <p>Audiences were dropping off after 3 seconds due to static brand intros. We pivoted towards immediate visual hooks and high-contrast typography in the first frame.</p>
-                    </div>
-                    <div class="modal-card">
-                        <h4><i class="ri-rocket-line"></i> Execution Tactics</h4>
-                        <p>Implemented 3-second pattern interrupts, micro-carousel series for educational content, and structured A/B testing on caption CTA variations.</p>
-                    </div>
+                <div class="modal-card mb-4">
+                    <h4><i class="ri-compass-3-line"></i> Core Strategy & Execution</h4>
+                    <ul>
+                        <li>Built platform-specific content strategies, campaign calendars, and communication plans for four brands across four different industries.</li>
+                        <li>Planned and executed paid campaigns, influencer marketing, and WhatsApp marketing initiatives, using KPI tracking to optimize ROI.</li>
+                        <li>Co-managed Vietjet's Diwali campaign — a 50% booking offer, a mall kiosk activation in Ahmedabad, and the "My Dream Boarding Pass" contest.</li>
+                        <li>Led social execution for T10 Sports as official merchandise partner for Gujarat Titans during IPL 2026, tying content to fan meetups and stadium activations.</li>
+                        <li>Conceptualized KD Amdavad Marathon's "Silent Runner" campaign — 8 runner silhouettes representing the 8 lives one organ donor can save.</li>
+                        <li>Diagnosed a 3-second audience drop-off on static brand intros and rebuilt the hook: immediate visual impact, high-contrast typography, pattern interrupts.</li>
+                    </ul>
                 </div>
             `,
             creatives: `
@@ -303,28 +302,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="mock-post-card">
                         <div class="mock-post-header">
                             <div class="mock-post-avatar"></div>
-                            <span class="mock-post-user">@scrollmantra_brand</span>
+                            <span class="mock-post-user">Vietjet Air • Diwali Campaign</span>
                         </div>
                         <div class="mock-post-body">
-                            🔥 "3 Reasons Your Reels Aren't Converting (And How We Fixed It)"
+                            ✈️ "My Dream Boarding Pass Contest & 50% Booking Offer Kiosk Activation"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-heart-line"></i> 14.2K</span>
-                            <span><i class="ri-chat-3-line"></i> 480</span>
-                            <span><i class="ri-share-forward-line"></i> 1.2K</span>
+                            <span><i class="ri-heart-line"></i> 12.5M+ Views</span>
+                            <span><i class="ri-chat-3-line"></i> 500% Interaction Surge</span>
                         </div>
                     </div>
                     <div class="mock-post-card">
                         <div class="mock-post-header">
                             <div class="mock-post-avatar"></div>
-                            <span class="mock-post-user">@scrollmantra_brand</span>
+                            <span class="mock-post-user">KD Amdavad Marathon</span>
                         </div>
                         <div class="mock-post-body">
-                            📊 "28-Day Audience Growth Blueprint Breakdown"
+                            🎽 "The Silent Runner — 8 Silhouettes, 8 Lives Saved by Organ Donation"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-heart-line"></i> 8.9K</span>
-                            <span><i class="ri-bookmark-line"></i> 2.4K</span>
+                            <span><i class="ri-share-forward-line"></i> Viral Campaign</span>
                         </div>
                     </div>
                 </div>
@@ -332,43 +329,43 @@ document.addEventListener('DOMContentLoaded', () => {
             metrics: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-trophy-line"></i> 3,000% Views Explosion</h4>
-                        <p>Scaled cumulative brand video views over 28 consecutive days from 400K to 12.5M+ total impressions.</p>
+                        <h4><i class="ri-trophy-line"></i> MoM Reach & View Growth</h4>
+                        <p><strong>+45.3%</strong> Facebook reach growth (MoM)<br>
+                        <strong>+40.3%</strong> Instagram reach growth (MoM)<br>
+                        <strong>+809%</strong> surge in YouTube views (MoM)</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-sparkles-line"></i> +500% Interaction Rate</h4>
-                        <p>Boosted comment volume, story replies, and saves by 5x through targeted interactive stickers and comment prompts.</p>
+                        <h4><i class="ri-sparkles-line"></i> 3,000% Campaign Surge</h4>
+                        <p>Scaled cumulative video view growth from <strong>400K → 12.5M+ views</strong> over a 28-day campaign push with <strong>+500%</strong> increase in content interactions.</p>
                     </div>
                 </div>
             `
         },
         'register-karo': {
             brand: 'Register Karo',
-            role: 'Content Planning & Execution Lead',
+            role: 'Social Media Marketing Intern',
             logoBg: '#f97316',
             logoContent: '<i class="ri-shield-check-fill" style="color: white; font-size: 1.5rem;"></i>',
             overview: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-building-line"></i> Brand Overview</h4>
-                        <p>Register Karo is a leading corporate legal & business registration service in India. I led organic content planning across LinkedIn and Instagram to build brand authority and trust among entrepreneurs.</p>
+                        <h4><i class="ri-building-line"></i> Executive Summary</h4>
+                        <p>Register Karo is a leading corporate legal and business registration service in India. As Social Media Marketing Intern, I led organic content strategy across LinkedIn and Instagram to build brand authority and trust with founders and entrepreneurs.</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-focus-3-line"></i> Content Strategy Scope</h4>
-                        <p>Developing educational compliance guides, startup registration cheat sheets, founder interview clips, and high-converting campaign scripts.</p>
+                        <h4><i class="ri-focus-3-line"></i> Primary Objective</h4>
+                        <p>Convert complex legal/compliance topics into engaging, digestible content that drives organic lead magnet downloads and website visits.</p>
                     </div>
                 </div>
             `,
             strategy: `
-                <div class="modal-grid-2">
-                    <div class="modal-card">
-                        <h4><i class="ri-file-text-line"></i> Scripting & Copywriting</h4>
-                        <p>Converted dry legal jargon into digestible, engaging infographics and story scripts tailored for young startup founders.</p>
-                    </div>
-                    <div class="modal-card">
-                        <h4><i class="ri-linkedin-box-line"></i> LinkedIn Thought Leadership</h4>
-                        <p>Authored document carousels demystifying tax perks, company compliance deadlines, and fundraising legal checklists.</p>
-                    </div>
+                <div class="modal-card mb-4">
+                    <h4><i class="ri-compass-3-line"></i> Core Strategy & Execution</h4>
+                    <ul>
+                        <li>Converted dense legal and compliance jargon into digestible, high-engagement infographics and story scripts.</li>
+                        <li>Built LinkedIn thought-leadership carousels on tax perks, compliance deadlines, and fundraising checklists.</li>
+                        <li>Developed and executed content calendars across LinkedIn and Instagram targeted at first-time founders.</li>
+                    </ul>
                 </div>
             `,
             creatives: `
@@ -379,11 +376,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="mock-post-user">Register Karo • LinkedIn</span>
                         </div>
                         <div class="mock-post-body">
-                            📄 "Complete Private Limited Registration Checklist for 2024 [PDF Guide]"
+                            📄 "Complete Pvt Ltd Registration Checklist [PDF Guide]"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-thumb-up-line"></i> 1,840</span>
-                            <span><i class="ri-chat-3-line"></i> 320 Reposts</span>
+                            <span><i class="ri-thumb-up-line"></i> 1,840 Reactions</span>
+                            <span><i class="ri-share-forward-line"></i> 320 Reposts</span>
                         </div>
                     </div>
                     <div class="mock-post-card">
@@ -395,8 +392,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             💡 "5 Costly Compliance Mistakes Every Founder Makes in Year 1"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-heart-line"></i> 6.1K</span>
-                            <span><i class="ri-bookmark-line"></i> 1.9K</span>
+                            <span><i class="ri-heart-line"></i> 6.1K Likes</span>
+                            <span><i class="ri-bookmark-line"></i> 1.9K Saves</span>
                         </div>
                     </div>
                 </div>
@@ -404,43 +401,43 @@ document.addEventListener('DOMContentLoaded', () => {
             metrics: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-line-chart-line"></i> Qualified Lead Inflow</h4>
-                        <p>Increased monthly organic website visits from LinkedIn & Instagram by 65% through direct lead magnet links.</p>
+                        <h4><i class="ri-line-chart-line"></i> Audience & Engagement Growth</h4>
+                        <p><strong>+35%</strong> LinkedIn follower growth<br>
+                        <strong>+48%</strong> Instagram engagement growth<br>
+                        <strong>+22%</strong> boost in overall post reach</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-group-line"></i> Community Authority</h4>
-                        <p>Grew follower count systematically with high-retention educational carousels and script templates.</p>
+                        <h4><i class="ri-external-link-line"></i> Organic Traffic Surge</h4>
+                        <p><strong>+65%</strong> increase in monthly organic website visits driven directly from social platforms via lead-magnet content.</p>
                     </div>
                 </div>
             `
         },
         'doyen-ed': {
             brand: 'Doyen Ed',
-            role: 'Social Media Growth & Webinar Campaign Specialist',
+            role: 'Social Media Marketing Intern',
             logoBg: '#d97706',
             logoContent: '<i class="ri-shield-star-fill" style="color: white; font-size: 1.5rem;"></i>',
             overview: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-building-line"></i> Brand Overview</h4>
-                        <p>Doyen Ed provides study abroad consultancy and global education mentorship. I managed their Instagram presence and performance-driven ad campaigns for high-ticket webinars.</p>
+                        <h4><i class="ri-building-line"></i> Executive Summary</h4>
+                        <p>Doyen Ed is a study-abroad consultancy and global education mentorship brand. As Social Media Marketing Intern, I managed their Instagram presence and performance ad campaigns to convert audience trust into webinar sign-ups at scale.</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-focus-3-line"></i> Primary Objective</h4>
-                        <p>Drive targeted student sign-ups for study abroad webinars while building an inspiring, high-trust Instagram brand community.</p>
+                        <h4><i class="ri-focus-3-line"></i> Key Focus</h4>
+                        <p>Engineered an end-to-end webinar funnel combining authentic student trust reels, ad campaigns, and broadcast channel countdowns.</p>
                     </div>
                 </div>
             `,
             strategy: `
-                <div class="modal-grid-2">
-                    <div class="modal-card">
-                        <h4><i class="ri-video-line"></i> Student Testimonials & Reels</h4>
-                        <p>Produced raw, authentic student visa approval reactions and university campus tours that resonated strongly with aspirational students.</p>
-                    </div>
-                    <div class="modal-card">
-                        <h4><i class="ri-calendar-check-line"></i> Webinar Funnel Optimization</h4>
-                        <p>Structured high-urgency Instagram countdown stories, live student Q&A sessions, and broadcast channel updates.</p>
-                    </div>
+                <div class="modal-card mb-4">
+                    <h4><i class="ri-compass-3-line"></i> Core Strategy & Execution</h4>
+                    <ul>
+                        <li>Produced authentic student testimonial reels (visa approvals, campus tours) to build aspirational trust.</li>
+                        <li>Led collaborations with educational brands and ran targeted ad campaigns to expand reach beyond the existing follower base.</li>
+                        <li>Engineered a webinar funnel: countdown stories, live Q&A sessions, broadcast channel updates.</li>
+                    </ul>
                 </div>
             `,
             creatives: `
@@ -451,10 +448,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="mock-post-user">@doyened_official</span>
                         </div>
                         <div class="mock-post-body">
-                            🎓 "How Rahul Got Full Scholarship at University of Toronto [Live Reel]"
+                            🎓 "How Rahul Got a Full Scholarship [Live Reel]"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-heart-line"></i> 22.4K</span>
+                            <span><i class="ri-heart-line"></i> 22.4K Likes</span>
                             <span><i class="ri-chat-3-line"></i> 940 Comments</span>
                         </div>
                     </div>
@@ -464,10 +461,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="mock-post-user">@doyened_official</span>
                         </div>
                         <div class="mock-post-body">
-                            🌍 "Global University Masterclass — Free Seats Left!"
+                            🌍 "Global University Masterclass — Sign-up Funnel"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-user-follow-line"></i> 450 Sign-ups</span>
+                            <span><i class="ri-user-add-line"></i> 450 Direct Sign-ups</span>
                         </div>
                     </div>
                 </div>
@@ -475,43 +472,41 @@ document.addEventListener('DOMContentLoaded', () => {
             metrics: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-user-shared-line"></i> Record Webinar Attendance</h4>
-                        <p>Attained over 1,200+ live webinar registrations per campaign through organic storytelling and targeted ads.</p>
+                        <h4><i class="ri-user-shared-line"></i> 1,200+ Webinar Sign-ups</h4>
+                        <p>Driven <strong>1,200+ live webinar registrations per campaign</strong> through organic storytelling and performance ad funnel strategy.</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-star-line"></i> Brand Perception Boost</h4>
-                        <p>Elevated brand trust with zero-friction Q&A reels and direct student counselor collaborations.</p>
+                        <h4><i class="ri-eye-line"></i> 98.5% Non-Follower Reach</h4>
+                        <p>Reached <strong>22,000+ impressions, 10,000+ unique accounts</strong> with <strong>98.5% of views from non-followers</strong> — genuine new-audience expansion.</p>
                     </div>
                 </div>
             `
         },
         'yellow-octo': {
             brand: 'Yellow Octo LLP',
-            role: 'Brand Communications & Engagement Strategist',
+            role: 'Social Media Marketing Intern',
             logoBg: '#171717',
             logoContent: '<i class="ri-tentacle-line" style="color: #ffc107; font-size: 1.5rem;"></i>',
             overview: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-building-line"></i> Brand Overview</h4>
-                        <p>Yellow Octo LLP is a creative agency. I strengthened their digital footprint across LinkedIn and Instagram by crafting human-centric agency culture content and B2B portfolio highlights.</p>
+                        <h4><i class="ri-building-line"></i> Executive Summary</h4>
+                        <p>Yellow Octo LLP is a creative agency. As Social Media Marketing Intern, I built out their LinkedIn and Instagram presence through human-centric culture content and B2B portfolio storytelling.</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-focus-3-line"></i> Core Focus</h4>
-                        <p>Demonstrating agency expertise, showcasing client wins, behind-the-scenes creative workflow, and founder personal branding.</p>
+                        <h4><i class="ri-focus-3-line"></i> Primary Objective</h4>
+                        <p>Humanize agency branding, showcase creative team culture, and publish B2B case study carousels that drive inbound client DMs.</p>
                     </div>
                 </div>
             `,
             strategy: `
-                <div class="modal-grid-2">
-                    <div class="modal-card">
-                        <h4><i class="ri-team-line"></i> Agency Culture & BTS</h4>
-                        <p>Humanized the agency by highlighting graphic designers, copywriters, and video editors in action to build client rapport.</p>
-                    </div>
-                    <div class="modal-card">
-                        <h4><i class="ri-briefcase-line"></i> B2B Portfolio Showcases</h4>
-                        <p>Designed case study carousels demonstrating client ROI and brand identity transformations.</p>
-                    </div>
+                <div class="modal-card mb-4">
+                    <h4><i class="ri-compass-3-line"></i> Core Strategy & Execution</h4>
+                    <ul>
+                        <li>Humanized the agency through behind-the-scenes content featuring designers, copywriters, and editors.</li>
+                        <li>Built case-study carousels demonstrating client ROI and brand transformation work.</li>
+                        <li>Managed Instagram strategy with targeted content and audience analysis to drive reach.</li>
+                    </ul>
                 </div>
             `,
             creatives: `
@@ -519,14 +514,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="mock-post-card">
                         <div class="mock-post-header">
                             <div class="mock-post-avatar" style="background:#ffc107;"></div>
-                            <span class="mock-post-user">Yellow Octo • Agency</span>
+                            <span class="mock-post-user">Yellow Octo • Instagram Reel</span>
                         </div>
                         <div class="mock-post-body">
                             🎬 "Day in the Life of a Creative Strategist [BTS Reel]"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-heart-line"></i> 11.8K</span>
-                            <span><i class="ri-share-forward-line"></i> 890</span>
+                            <span><i class="ri-heart-line"></i> 11.8K Likes</span>
+                            <span><i class="ri-share-forward-line"></i> 890 Shares</span>
                         </div>
                     </div>
                     <div class="mock-post-card">
@@ -538,7 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             🚀 "How We Rebranded a Fintech Startup in 14 Days"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-thumb-up-line"></i> 950</span>
+                            <span><i class="ri-thumb-up-line"></i> 950 Reactions</span>
                         </div>
                     </div>
                 </div>
@@ -546,43 +541,42 @@ document.addEventListener('DOMContentLoaded', () => {
             metrics: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-eye-line"></i> Inbound Agency Inquiries</h4>
-                        <p>Increased inbound direct message client leads by 40% through organic LinkedIn & Instagram positioning.</p>
+                        <h4><i class="ri-line-chart-line"></i> Follower & Reach Surge</h4>
+                        <p><strong>+24%</strong> LinkedIn follower growth with 4,500+ organic impressions in 2 months.<br>
+                        <strong>+24%</strong> Instagram follower growth with a <strong>60% increase in reach</strong>.</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-user-add-line"></i> Engagement Rate Surge</h4>
-                        <p>Consistently outpaced industry average agency engagement through authentic behind-the-scenes content.</p>
+                        <h4><i class="ri-message-3-line"></i> +40% Inbound Client Inquiries</h4>
+                        <p>Increased qualified inbound B2B client inquiries via Instagram & LinkedIn direct messages by <strong>40%</strong>.</p>
                     </div>
                 </div>
             `
         },
-        'flyup': {
-            brand: 'FlyUp',
-            role: 'Social Media Content & Growth Lead',
+        'flypup': {
+            brand: 'FlypUp',
+            role: 'Social Media Marketing Intern',
             logoBg: '#7c3aed',
             logoContent: '<i class="ri-flight-takeoff-line" style="color: white; font-size: 1.5rem;"></i>',
             overview: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-building-line"></i> Brand Overview</h4>
-                        <p>FlyUp is an innovative lifestyle & tech brand. I spearheaded content strategy and asset production, managing full monthly content calendars and brand voice guidelines.</p>
+                        <h4><i class="ri-building-line"></i> Executive Summary</h4>
+                        <p>FlypUp is an innovative lifestyle and tech brand. As Social Media Marketing Intern, I owned content strategy and asset production end-to-end, running a full monthly content calendar and brand voice system.</p>
                     </div>
                     <div class="modal-card">
                         <h4><i class="ri-focus-3-line"></i> Scale of Execution</h4>
-                        <p>Produced 100+ high-quality visual posts, carousel slides, promotional stories, and platform-tailored ad creatives.</p>
+                        <p>Designed and published 100+ platform-tailored assets: posts, carousels, stories, and ad creatives with zero posting gaps.</p>
                     </div>
                 </div>
             `,
             strategy: `
-                <div class="modal-grid-2">
-                    <div class="modal-card">
-                        <h4><i class="ri-calendar-line"></i> Structured Content Calendar</h4>
-                        <p>Established a bulletproof 30-day content pipeline ensuring zero gaps in posting and maximum algorithmic consistency.</p>
-                    </div>
-                    <div class="modal-card">
-                        <h4><i class="ri-palette-line"></i> Visual Identity Optimization</h4>
-                        <p>Maintained clean, modern aesthetic guidelines on Canva and Adobe suite for unified brand recognition across channels.</p>
-                    </div>
+                <div class="modal-card mb-4">
+                    <h4><i class="ri-compass-3-line"></i> Core Strategy & Execution</h4>
+                    <ul>
+                        <li>Built a 30-day content pipeline with zero posting gaps for algorithmic consistency.</li>
+                        <li>Maintained a unified visual identity across Canva and CapCut for cross-channel brand recognition.</li>
+                        <li>Designed 100+ platform-tailored assets: posts, carousels, stories, and ad creatives.</li>
+                    </ul>
                 </div>
             `,
             creatives: `
@@ -590,23 +584,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="mock-post-card">
                         <div class="mock-post-header">
                             <div class="mock-post-avatar" style="background:#7c3aed;"></div>
-                            <span class="mock-post-user">@flyup_official</span>
+                            <span class="mock-post-user">@flypup_official</span>
                         </div>
                         <div class="mock-post-body">
-                            ⚡ "Escape the Ordinary — Launching FlyUp Series II"
+                            ⚡ "Escape the Ordinary — Series II"
                         </div>
                         <div class="mock-post-stats">
-                            <span><i class="ri-heart-line"></i> 18.9K</span>
-                            <span><i class="ri-chat-3-line"></i> 620</span>
+                            <span><i class="ri-heart-line"></i> 18.9K Likes</span>
+                            <span><i class="ri-chat-3-line"></i> 620 Comments</span>
                         </div>
                     </div>
                     <div class="mock-post-card">
                         <div class="mock-post-header">
                             <div class="mock-post-avatar" style="background:#7c3aed;"></div>
-                            <span class="mock-post-user">@flyup_official</span>
+                            <span class="mock-post-user">@flypup_official</span>
                         </div>
                         <div class="mock-post-body">
-                            🎁 "Weekly Community Giveaway Campaign Story"
+                            🎁 "Weekly Community Giveaway"
                         </div>
                         <div class="mock-post-stats">
                             <span><i class="ri-user-add-line"></i> +1.4K Followers</span>
@@ -617,12 +611,15 @@ document.addEventListener('DOMContentLoaded', () => {
             metrics: `
                 <div class="modal-grid-2">
                     <div class="modal-card">
-                        <h4><i class="ri-arrow-right-up-line"></i> +41% Follower Growth</h4>
-                        <p>Expanded brand follower base by 41% within 60 days of implementing targeted content calendars.</p>
+                        <h4><i class="ri-arrow-right-up-line"></i> Engagement & Follower Growth</h4>
+                        <p><strong>+41%</strong> follower growth<br>
+                        <strong>+38%</strong> engagement growth<br>
+                        <strong>+29%</strong> rise in brand visibility<br>
+                        <strong>+15%</strong> increase in audience retention</p>
                     </div>
                     <div class="modal-card">
-                        <h4><i class="ri-checkbox-circle-line"></i> 100+ Assets Produced</h4>
-                        <p>Delivered 100+ ready-to-publish graphics, carousels, and stories on schedule with high visual excellence.</p>
+                        <h4><i class="ri-checkbox-circle-line"></i> 100+ Assets Delivered</h4>
+                        <p>100+ assets delivered on schedule, reaching 200+ unique viewers within three months.</p>
                     </div>
                 </div>
             `
@@ -660,7 +657,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('tab-creatives').innerHTML = study.creatives;
         document.getElementById('tab-metrics').innerHTML = study.metrics;
 
-        // Reset to first tab
         switchModalTab('overview');
 
         modalBackdrop.classList.add('active');
